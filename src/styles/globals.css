@@ -1,0 +1,60 @@
+/* src/styles/globals.css */
+
+html, body, #__next {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.map-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.checkin-form {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255,255,255,0.9);
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 8px;
+}
+
+.checkin-input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 1rem;
+}
+
+.checkin-button {
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.checkin-button:hover {
+  background-color: #005bb5;
+}
+
+/* disable pinch‑zoom across the page */
+html, body, #__next {
+  touch-action: pan-x pan-y;
+}
+
+/* re‑enable pinch‑zoom on the map container */
+.map-container {
+  /* Google Maps itself will capture and handle pinch events */
+  touch-action: pinch-zoom;
+}
